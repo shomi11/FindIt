@@ -12,6 +12,7 @@
 		CAEB50FE26678F9D0056875F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAEB50FD26678F9D0056875F /* Assets.xcassets */; };
 		CAEB510126678F9D0056875F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAEB510026678F9D0056875F /* Preview Assets.xcassets */; };
 		CAEB51092667A8BD0056875F /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEB51082667A8BD0056875F /* LocationManager.swift */; };
+		CAEB510B266811F70056875F /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEB510A266811F70056875F /* SearchBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		CAEB510026678F9D0056875F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CAEB510226678F9D0056875F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CAEB51082667A8BD0056875F /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		CAEB510A266811F70056875F /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				CAEB510226678F9D0056875F /* Info.plist */,
 				CAEB50FF26678F9D0056875F /* Preview Content */,
 				CAEB51082667A8BD0056875F /* LocationManager.swift */,
+				CAEB510A266811F70056875F /* SearchBar.swift */,
 			);
 			path = FindIt;
 			sourceTree = "<group>";
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CAEB50FC26678F9D0056875F /* ContentView.swift in Sources */,
+				CAEB510B266811F70056875F /* SearchBar.swift in Sources */,
 				CAEB50FA26678F9D0056875F /* FindItApp.swift in Sources */,
 				CAEB51092667A8BD0056875F /* LocationManager.swift in Sources */,
 			);

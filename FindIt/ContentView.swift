@@ -11,7 +11,7 @@ import MapKit
 struct ContentView: View {
 
     @ObservedObject var locationManager = LocationManager()
-
+    @State var searchText: String = ""
 
     @State private var region = MKCoordinateRegion(
         center: CLLocationCoordinate2D(latitude: 44.8125, longitude: 20.4612),
@@ -21,6 +21,7 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             VStack {
+                SearchBar(text: $searchText)
                 Map(coordinateRegion: $region, showsUserLocation: true, userTrackingMode: .constant(.follow))
             }
             .edgesIgnoringSafeArea(.bottom)
@@ -51,3 +52,4 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
