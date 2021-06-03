@@ -9,18 +9,18 @@ import Foundation
 import CoreLocation
 import Combine
 
-
 class LocationManager: NSObject, ObservableObject {
 
     private let locationManager = CLLocationManager()
     @Published var authorizationStatus: CLAuthorizationStatus = .notDetermined
     @Published var location: CLLocation?
+    @Published var region: CLRegion?
 
     override init() {
         super.init()
         self.locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
-        locationManager.requestLocation()
+        locationManager.startUpdatingLocation()
     }
 }
 

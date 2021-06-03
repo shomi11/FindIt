@@ -11,38 +11,52 @@ import MapKit
 struct ContentView: View {
 
     @ObservedObject var locationManager = LocationManager()
-    @State var searchText: String = ""
-
-    @State private var region = MKCoordinateRegion(
-        center: CLLocationCoordinate2D(latitude: 44.8125, longitude: 20.4612),
-        span: MKCoordinateSpan(latitudeDelta: 0.7, longitudeDelta: 0.7)
-    )
+    @State private var searchText: String = ""
+    @State private var location: CLLocation?
+    @State private var landmarks: [Landmark] = []
 
     var body: some View {
         NavigationView {
             VStack {
                 SearchBar(text: $searchText)
-                Map(coordinateRegion: $region, showsUserLocation: true, userTrackingMode: .constant(.follow))
+                MapView(userLocation: $location, landMarks: landmarks)
             }
             .edgesIgnoringSafeArea(.bottom)
             .navigationTitle("Find your place!")
         }
-        .onReceive(locationManager.$location, perform: setMapRegion)
+        .onChange(of: searchText, perform: { value in
+            getLocalCoffee()
+        })
+        .onReceive(locationManager.$location, perform: userLocation)
         .onReceive(locationManager.$authorizationStatus, perform: { status in
             switch status {
             case .authorizedAlways:
-                locationManager.requestLocation()
+                locationManager.updateLocation()
             case .authorizedWhenInUse:
-                locationManager.requestLocation()
+                locationManager.updateLocation()
             default:
                 break
             }
         })
     }
 
-    private func setMapRegion(with location: CLLocation?) {
-        if let location = location {
-            region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude), span: MKCoordinateSpan(latitudeDelta: 0.4, longitudeDelta: 0.4))
+    private func userLocation(location: CLLocation?) {
+        self.location = location
+        locationManager.stopUpdatingLocation()
+    }
+
+    private func getLocalCoffee() {
+        let request = MKLocalSearch.Request()
+        request.pointOfInterestFilter = MKPointOfInterestFilter(including: [.cafe])
+        request.naturalLanguageQuery = searchText
+        let search = MKLocalSearch(request: request)
+        search.start { response, err in
+            guard err == nil else { return }
+            guard let response = response else { return }
+            let items = response.mapItems
+            landmarks = items.map {
+                Landmark(landMark: $0.placemark)
+            }
         }
     }
 }

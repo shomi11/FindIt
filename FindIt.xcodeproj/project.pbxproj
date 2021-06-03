@@ -13,6 +13,10 @@
 		CAEB510126678F9D0056875F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAEB510026678F9D0056875F /* Preview Assets.xcassets */; };
 		CAEB51092667A8BD0056875F /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEB51082667A8BD0056875F /* LocationManager.swift */; };
 		CAEB510B266811F70056875F /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEB510A266811F70056875F /* SearchBar.swift */; };
+		CAEB510D2668385A0056875F /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEB510C2668385A0056875F /* MapView.swift */; };
+		CAEB510F266839470056875F /* MapCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEB510E266839470056875F /* MapCoordinator.swift */; };
+		CAEB5111266848490056875F /* LandMark.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEB5110266848490056875F /* LandMark.swift */; };
+		CAEB511326684A790056875F /* CoffeePin.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEB511226684A790056875F /* CoffeePin.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		CAEB510226678F9D0056875F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CAEB51082667A8BD0056875F /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		CAEB510A266811F70056875F /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		CAEB510C2668385A0056875F /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		CAEB510E266839470056875F /* MapCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapCoordinator.swift; sourceTree = "<group>"; };
+		CAEB5110266848490056875F /* LandMark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandMark.swift; sourceTree = "<group>"; };
+		CAEB511226684A790056875F /* CoffeePin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeePin.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +71,10 @@
 				CAEB50FF26678F9D0056875F /* Preview Content */,
 				CAEB51082667A8BD0056875F /* LocationManager.swift */,
 				CAEB510A266811F70056875F /* SearchBar.swift */,
+				CAEB510C2668385A0056875F /* MapView.swift */,
+				CAEB510E266839470056875F /* MapCoordinator.swift */,
+				CAEB5110266848490056875F /* LandMark.swift */,
+				CAEB511226684A790056875F /* CoffeePin.swift */,
 			);
 			path = FindIt;
 			sourceTree = "<group>";
@@ -145,7 +157,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				CAEB50FC26678F9D0056875F /* ContentView.swift in Sources */,
+				CAEB511326684A790056875F /* CoffeePin.swift in Sources */,
+				CAEB5111266848490056875F /* LandMark.swift in Sources */,
 				CAEB510B266811F70056875F /* SearchBar.swift in Sources */,
+				CAEB510D2668385A0056875F /* MapView.swift in Sources */,
+				CAEB510F266839470056875F /* MapCoordinator.swift in Sources */,
 				CAEB50FA26678F9D0056875F /* FindItApp.swift in Sources */,
 				CAEB51092667A8BD0056875F /* LocationManager.swift in Sources */,
 			);
