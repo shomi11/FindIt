@@ -22,7 +22,7 @@ struct ContentView: View {
                 MapView(userLocation: $location, landMarks: landmarks)
             }
             .edgesIgnoringSafeArea(.bottom)
-            .navigationTitle("Find your place!")
+            .navigationTitle("Find your coffee!")
         }
         .onChange(of: searchText, perform: { value in
             getLocalCoffee()
