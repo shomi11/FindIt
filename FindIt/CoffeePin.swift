@@ -11,10 +11,12 @@ import MapKit
 class CoffeePin: NSObject, MKAnnotation {
     var coordinate: CLLocationCoordinate2D
     var title: String?
+    var subtitle: String?
+    var image: UIImage?
 
     init(landmark: Landmark) {
         coordinate = landmark.coordinate
         title = landmark.name
+        subtitle = landmark.phoneNumber
     }
-
 }

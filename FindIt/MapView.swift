@@ -18,6 +18,7 @@ struct MapView: UIViewRepresentable {
         let map = MKMapView()
         map.showsUserLocation = true
         map.delegate = context.coordinator
+        map.register(CoffeePinView.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
         if let region = centerUserInitial() {
             map.setRegion(region, animated: true)
         }

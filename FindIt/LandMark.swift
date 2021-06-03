@@ -11,6 +11,7 @@ import MapKit
 struct Landmark {
 
     let landMark: MKPlacemark
+    let phoneNumber: String
 
     var id: UUID {
         return UUID()
@@ -21,7 +22,7 @@ struct Landmark {
     }
 
     var subTitle: String {
-        return landMark.subtitle ?? ""
+        return landMark.subtitle ?? "s"
     }
 
     var coordinate: CLLocationCoordinate2D {

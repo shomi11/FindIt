@@ -17,6 +17,7 @@
 		CAEB510F266839470056875F /* MapCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEB510E266839470056875F /* MapCoordinator.swift */; };
 		CAEB5111266848490056875F /* LandMark.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEB5110266848490056875F /* LandMark.swift */; };
 		CAEB511326684A790056875F /* CoffeePin.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEB511226684A790056875F /* CoffeePin.swift */; };
+		CAEB51152668D1090056875F /* CoffeePinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEB51142668D1090056875F /* CoffeePinView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		CAEB510E266839470056875F /* MapCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapCoordinator.swift; sourceTree = "<group>"; };
 		CAEB5110266848490056875F /* LandMark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandMark.swift; sourceTree = "<group>"; };
 		CAEB511226684A790056875F /* CoffeePin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeePin.swift; sourceTree = "<group>"; };
+		CAEB51142668D1090056875F /* CoffeePinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeePinView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				CAEB510A266811F70056875F /* SearchBar.swift */,
 				CAEB510C2668385A0056875F /* MapView.swift */,
 				CAEB510E266839470056875F /* MapCoordinator.swift */,
+				CAEB51142668D1090056875F /* CoffeePinView.swift */,
 				CAEB5110266848490056875F /* LandMark.swift */,
 				CAEB511226684A790056875F /* CoffeePin.swift */,
 			);
@@ -162,6 +165,7 @@
 				CAEB510B266811F70056875F /* SearchBar.swift in Sources */,
 				CAEB510D2668385A0056875F /* MapView.swift in Sources */,
 				CAEB510F266839470056875F /* MapCoordinator.swift in Sources */,
+				CAEB51152668D1090056875F /* CoffeePinView.swift in Sources */,
 				CAEB50FA26678F9D0056875F /* FindItApp.swift in Sources */,
 				CAEB51092667A8BD0056875F /* LocationManager.swift in Sources */,
 			);

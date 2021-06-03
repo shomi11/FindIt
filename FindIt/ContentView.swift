@@ -45,6 +45,7 @@ struct ContentView: View {
         locationManager.stopUpdatingLocation()
     }
 
+    /// Show only local coffee shops
     private func getLocalCoffee() {
         let request = MKLocalSearch.Request()
         request.pointOfInterestFilter = MKPointOfInterestFilter(including: [.cafe])
@@ -55,7 +56,7 @@ struct ContentView: View {
             guard let response = response else { return }
             let items = response.mapItems
             landmarks = items.map {
-                Landmark(landMark: $0.placemark)
+                Landmark(landMark: $0.placemark, phoneNumber: $0.phoneNumber ?? "")
             }
         }
     }
